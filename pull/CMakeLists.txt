@@ -2,11 +2,13 @@
 if(USE_THIRDPARTY_LIBRARIES)
   find_package(civetweb-3rdparty CONFIG REQUIRED)
 else()
-  find_package(CivetWeb REQUIRED)
+  hunter_add_package(civetweb)
+  find_package(civetweb CONFIG REQUIRED)
 endif()
 
 if(ENABLE_COMPRESSION)
-  find_package(ZLIB REQUIRED)
+  hunter_add_package(ZLIB)
+  find_package(ZLIB CONFIG REQUIRED)
 endif()
 
 add_library(pull
@@ -21,18 +23,13 @@ add_library(${PROJECT_NAME}::pull ALIAS pull)
 target_link_libraries(pull
   PUBLIC
     ${PROJECT_NAME}::core
-  PRIVATE
-    Threads::Threads
-    ${CIVETWEB_LIBRARIES}
-    $<$<AND:$<BOOL:UNIX>,$<NOT:$<BOOL:APPLE>>>:rt>
-    $<$<BOOL:${ENABLE_COMPRESSION}>:ZLIB::ZLIB>
+    civetweb::civetweb-cpp
+    $<$<BOOL:${ENABLE_COMPRESSION}>:ZLIB::zlib>
 )
 
 target_include_directories(pull
   PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-  PRIVATE
-    ${CIVETWEB_INCLUDE_DIRS}
 )
 
 target_compile_definitions(pull

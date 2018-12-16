@@ -1,6 +1,13 @@
 
 cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
 
+include(cmake/HunterGate.cmake)
+HunterGate(
+    URL "https://github.com/ruslo/hunter/archive/v0.22.16.tar.gz"
+    SHA1 "84153076a3cebf4869c904fa5c93ea309386b583"
+    LOCAL
+)
+
 project(prometheus-cpp)
 
 include(GNUInstallDirs)

@@ -1,5 +1,6 @@
 
-find_package(CURL REQUIRED)
+hunter_add_package(CURL)
+find_package(CURL CONFIG REQUIRED)
 
 add_library(push
   src/gateway.cc
@@ -10,17 +11,12 @@ add_library(${PROJECT_NAME}::push ALIAS push)
 target_link_libraries(push
   PUBLIC
     ${PROJECT_NAME}::core
-  PRIVATE
-    Threads::Threads
-    ${CURL_LIBRARIES}
-    $<$<AND:$<BOOL:UNIX>,$<NOT:$<BOOL:APPLE>>>:rt>
+    CURL::libcurl
 )
 
 target_include_directories(push
   PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-  PRIVATE
-    ${CURL_INCLUDE_DIRS}
 )
 
 set_target_properties(push PROPERTIES OUTPUT_NAME ${PROJECT_NAME}-push)

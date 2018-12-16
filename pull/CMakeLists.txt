@@ -8,6 +8,7 @@ if(USE_THIRDPARTY_LIBRARIES)
     PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/prometheus
   )
 else()
+  hunter_add_package(civetweb)
   find_package(civetweb CONFIG REQUIRED)
 
   # work-around https://github.com/civetweb/civetweb/pull/918
@@ -18,7 +19,8 @@ else()
 endif()
 
 if(ENABLE_COMPRESSION)
-  find_package(ZLIB REQUIRED)
+  hunter_add_package(ZLIB)
+  find_package(ZLIB CONFIG REQUIRED)
 endif()
 
 add_library(pull
@@ -48,15 +50,12 @@ target_link_libraries(pull
     Threads::Threads
     $<IF:$<BOOL:${USE_THIRDPARTY_LIBRARIES}>,${PROJECT_NAME}::civetweb,civetweb::civetweb-cpp>
     $<$<AND:$<BOOL:UNIX>,$<NOT:$<BOOL:APPLE>>>:rt>
-    $<$<BOOL:${ENABLE_COMPRESSION}>:ZLIB::ZLIB>
+    $<$<BOOL:${ENABLE_COMPRESSION}>:ZLIB::zlib>
 )
 
 target_include_directories(pull
   PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-    $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}/include>
-  PRIVATE
-    ${CIVETWEB_INCLUDE_DIRS}
 )
 
 target_compile_definitions(pull

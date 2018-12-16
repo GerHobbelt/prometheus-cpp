@@ -4,6 +4,13 @@ if(POLICY CMP0091)
   cmake_policy(SET CMP0091 NEW) # recognize CMAKE_MSVC_RUNTIME_LIBRARY
 endif()
 
+include(cmake/HunterGate.cmake)
+HunterGate(
+    URL "https://github.com/ruslo/hunter/archive/v0.22.16.tar.gz"
+    SHA1 "84153076a3cebf4869c904fa5c93ea309386b583"
+    LOCAL
+)
+
 project(prometheus-cpp
   VERSION 1.2.4
   DESCRIPTION "Prometheus Client Library for Modern C++"

@@ -24,7 +24,7 @@ target_compile_features(core
 )
 
 target_link_libraries(core
-  PRIVATE
+  PUBLIC
     Threads::Threads
     $<$<AND:$<BOOL:UNIX>,$<NOT:$<BOOL:APPLE>>>:rt>
 )

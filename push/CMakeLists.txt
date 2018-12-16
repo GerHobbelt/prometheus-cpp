@@ -1,5 +1,6 @@
 
-find_package(CURL REQUIRED)
+hunter_add_package(CURL)
+find_package(CURL CONFIG REQUIRED)
 
 add_library(push
   src/gateway.cc
@@ -30,7 +31,6 @@ target_link_libraries(push
 target_include_directories(push
   PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-    $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}/include>
 )
 
 set_target_properties(push

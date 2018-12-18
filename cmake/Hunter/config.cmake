@@ -1,2 +1,3 @@
-hunter_config(civetweb VERSION 1.10-p1
-              CMAKE_ARGS CIVETWEB_ENABLE_CXX=ON)
+hunter_config(OpenSSL VERSION 1.1.1a)
+hunter_config(civetweb VERSION 1.11-p0
+              CMAKE_ARGS CIVETWEB_SSL_OPENSSL_API_1_1=ON)

@@ -14,7 +14,7 @@ unset(CMAKE_THREAD_PREFER_PTHREAD)
 if(PROMETHEUS_CPP_ENABLE_PULL)
   find_package(civetweb CONFIG REQUIRED)
   if(PROMETHEUS_CPP_USE_COMPRESSION)
-    find_dependency(ZLIB CONFIG REQUIRED)
+    find_package(ZLIB CONFIG REQUIRED)
   endif()
 endif()
 

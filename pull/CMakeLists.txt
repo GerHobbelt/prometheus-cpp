@@ -23,6 +23,7 @@ add_library(${PROJECT_NAME}::pull ALIAS pull)
 target_link_libraries(pull
   PUBLIC
     ${PROJECT_NAME}::core
+  PRIVATE
     civetweb::civetweb-cpp
     $<$<BOOL:${ENABLE_COMPRESSION}>:ZLIB::zlib>
 )

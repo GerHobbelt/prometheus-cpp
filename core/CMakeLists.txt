@@ -19,7 +19,7 @@ add_library(core
 add_library(${PROJECT_NAME}::core ALIAS core)
 
 target_link_libraries(core
-  PUBLIC
+  PRIVATE
     Threads::Threads
     $<$<AND:$<BOOL:UNIX>,$<NOT:$<BOOL:APPLE>>>:rt>
 )

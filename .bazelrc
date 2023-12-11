@@ -11,7 +11,7 @@ build:asan --cc_output_directory_tag=asan
 
 build:ssl --define=with_civetweb_ssl=true
 
-common --experimental_enable_bzlmod
+common --enable_bzlmod
 #common --registry="https://raw.githubusercontent.com/Pattern-Labs/index-registry/main/"
 common --registry="file:///home/jklingner/code/index-registry/"
 common --registry="https://raw.githubusercontent.com/bazelbuild/bazel-central-registry/main/"

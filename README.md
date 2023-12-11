@@ -8,7 +8,7 @@
 This library aims to enable
 [Metrics-Driven Development](https://sookocheff.com/post/mdd/mdd/) for
 C++ services. It implements the
-[Prometheus Data Model](https://prometheus.io/docs/concepts/data_model/),
+[Prometheus Data Model](https://core.io/docs/concepts/data_model/),
 a powerful abstraction on which to collect and expose metrics. We
 offer the possibility for metrics to be collected by Prometheus, but
 other push/pull collections can be added as plugins.
@@ -18,9 +18,9 @@ other push/pull collections can be added as plugins.
 See https://jupp0r.github.io/prometheus-cpp for more detailed interface documentation.
 
 ``` c++
-#include <prometheus/counter.h>
+#include <prometheus/core/counter.h>
 #include <prometheus/exposer.h>
-#include <prometheus/registry.h>
+#include <prometheus/core/registry.h>
 
 #include <array>
 #include <chrono>
@@ -43,7 +43,7 @@ int main() {
   // same name, but distinct label dimensions)
   //
   // @note please follow the metric-naming best-practices:
-  // https://prometheus.io/docs/practices/naming/
+  // https://core.io/docs/practices/naming/
   auto& packet_counter = BuildCounter()
                              .Name("observed_packets_total")
                              .Help("Number of observed packets")
@@ -61,7 +61,7 @@ int main() {
 
   // add a counter whose dimensional data is not known at compile time
   // nevertheless dimensional values should only occur in low cardinality:
-  // https://prometheus.io/docs/practices/naming/#labels
+  // https://core.io/docs/practices/naming/#labels
   auto& http_requests_counter = BuildCounter()
                                     .Name("http_requests_total")
                                     .Help("Number of HTTP requests")
@@ -228,13 +228,13 @@ When manually linking prometheus-cpp the library order matters. The needed
 libraries depend on the individual use case but the following should work for the pull metrics approach:
 
 ```
--lprometheus-cpp-pull -lprometheus-cpp-core -lz
+-lprometheus-cpp-pull -lprometheus-cpp-prometheus -lz
 ```
 
 For the push-workflow please try:
 
 ```
--lprometheus-cpp-push -lprometheus-cpp-core -lcurl -lz
+-lprometheus-cpp-push -lprometheus-cpp-prometheus -lcurl -lz
 ```
 
 ## Contributing
@@ -272,7 +272,7 @@ bazel run -c opt //core/benchmarks
 INFO: Analysed target //core/benchmarks:benchmarks (0 packages loaded, 0 targets configured).
 INFO: Found 1 target...
 Target //core/benchmarks:benchmarks up-to-date:
-  bazel-bin/core/benchmarks/benchmarks
+  bazel-bin/prometheus/benchmarks/benchmarks
 INFO: Elapsed time: 0.356s, Critical Path: 0.01s, Remote (0.00% of the time): [queue: 0.00%, setup: 0.00%, process: 0.00%]
 INFO: 0 processes.
 INFO: Build completed successfully, 1 total action

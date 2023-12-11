@@ -1,4 +1,4 @@
-#include "prometheus/counter.h"
+#include "prometheus/core/counter.h"
 
 #include <gtest/gtest.h>
 

@@ -6,9 +6,9 @@
 #include <memory>
 #include <string>
 
-#include "prometheus/collectable.h"
-#include "prometheus/registry.h"
-#include "pull/basic_auth.h"
+#include "prometheus/core/collectable.h"
+#include "prometheus/core/registry.h"
+#include "prometheus/pull/basic_auth.h"
 
 namespace prometheus {
 namespace detail {

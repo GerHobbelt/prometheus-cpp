@@ -3,7 +3,7 @@
 #include <memory>
 #include <vector>
 
-#include "prometheus/metric_family.h"
+#include "prometheus/core/metric_family.h"
 
 namespace prometheus {
 class Collectable;

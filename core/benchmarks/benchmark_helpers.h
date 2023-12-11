@@ -3,7 +3,7 @@
 #include <cstddef>
 #include <string>
 
-#include "prometheus/labels.h"
+#include "prometheus/core/labels.h"
 
 std::string GenerateRandomString(std::size_t length);
 prometheus::Labels GenerateRandomLabels(std::size_t number_of_labels);

@@ -5,9 +5,9 @@
 #include <random>
 #include <vector>
 
-#include "prometheus/family.h"
-#include "prometheus/histogram.h"
-#include "prometheus/registry.h"
+#include "prometheus/core/family.h"
+#include "prometheus/core/histogram.h"
+#include "prometheus/core/registry.h"
 
 using prometheus::Histogram;
 

@@ -5,12 +5,12 @@
 #include <string>
 #include <thread>
 
-#include "prometheus/client_metric.h"
-#include "prometheus/counter.h"
-#include "prometheus/family.h"
-#include "prometheus/info.h"
-#include "prometheus/registry.h"
-#include "pull/exposer.h"
+#include "prometheus/core/client_metric.h"
+#include "prometheus/core/counter.h"
+#include "prometheus/core/family.h"
+#include "prometheus/core/info.h"
+#include "prometheus/core/registry.h"
+#include "prometheus/pull/exposer.h"
 
 int main() {
   using namespace prometheus;
@@ -26,7 +26,7 @@ int main() {
   // same name, but distinct label dimensions)
   //
   // @note please follow the metric-naming best-practices:
-  // https://prometheus.io/docs/practices/naming/
+  // https://core.io/docs/practices/naming/
   auto& packet_counter = BuildCounter()
                              .Name("observed_packets_total")
                              .Help("Number of observed packets")
@@ -44,7 +44,7 @@ int main() {
 
   // add a counter whose dimensional data is not known at compile time
   // nevertheless dimensional values should only occur in low cardinality:
-  // https://prometheus.io/docs/practices/naming/#labels
+  // https://core.io/docs/practices/naming/#labels
   auto& http_requests_counter = BuildCounter()
                                     .Name("http_requests_total")
                                     .Help("Number of HTTP requests")

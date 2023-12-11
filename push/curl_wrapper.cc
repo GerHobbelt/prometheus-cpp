@@ -1,4 +1,4 @@
-#include "push/curl_wrapper.h"
+#include "prometheus/push/curl_wrapper.h"
 
 #include <stdexcept>
 

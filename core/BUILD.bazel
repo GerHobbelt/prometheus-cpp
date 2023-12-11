@@ -1,20 +1,46 @@
-load("//bazel:export_header.bzl", "generate_dummy_export_header")
-
-generate_dummy_export_header(
-    name = "export_header",
-    basename = "PROMETHEUS_CPP_CORE",
-    header = "include/prometheus/detail/core_export.h",
-)
+load("@rules_cc//cc:defs.bzl", "cc_library")
 
 cc_library(
     name = "core",
-    srcs = glob([
-        "src/**/*.cc",
-        "src/**/*.h",
-    ]),
-    hdrs = glob(
-        ["include/**/*.h"],
-    ) + [":export_header"],
-    strip_include_prefix = "include",
+    srcs = [
+        "check_names.cc",
+        "counter.cc",
+        "detail/builder.cc",
+        "detail/ckms_quantiles.cc",
+        "detail/time_window_quantiles.cc",
+        "detail/utils.cc",
+        "family.cc",
+        "gauge.cc",
+        "histogram.cc",
+        "info.cc",
+        "registry.cc",
+        "serializer.cc",
+        "summary.cc",
+        "text_serializer.cc",
+    ],
+    hdrs = [
+        "check_names.h",
+        "client_metric.h",
+        "collectable.h",
+        "counter.h",
+        "detail/builder.h",
+        "detail/ckms_quantiles.h",
+        "detail/future_std.h",
+        "detail/hash.h",
+        "detail/time_window_quantiles.h",
+        "detail/utils.h",
+        "family.h",
+        "gauge.h",
+        "histogram.h",
+        "info.h",
+        "labels.h",
+        "metric_family.h",
+        "metric_type.h",
+        "registry.h",
+        "serializer.h",
+        "summary.h",
+        "text_serializer.h",
+    ],
+    include_prefix = "prometheus/core/",
     visibility = ["//visibility:public"],
 )

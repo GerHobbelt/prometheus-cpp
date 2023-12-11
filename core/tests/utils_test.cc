@@ -1,4 +1,4 @@
-#include "prometheus/detail/utils.h"
+#include "prometheus/core/detail/utils.h"
 
 #include <gtest/gtest.h>
 

@@ -1,8 +1,8 @@
 #include <benchmark/benchmark.h>
 
-#include "prometheus/family.h"
-#include "prometheus/info.h"
-#include "prometheus/registry.h"
+#include "prometheus/core/family.h"
+#include "prometheus/core/info.h"
+#include "prometheus/core/registry.h"
 
 static void BM_Info_Collect(benchmark::State& state) {
   using prometheus::BuildInfo;

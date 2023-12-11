@@ -1,15 +1,15 @@
-#include "prometheus/registry.h"
+#include "prometheus/core/registry.h"
 
 #include <gtest/gtest.h>
 
 #include <cstddef>
 #include <vector>
 
-#include "prometheus/counter.h"
-#include "prometheus/gauge.h"
-#include "prometheus/histogram.h"
-#include "prometheus/info.h"
-#include "prometheus/summary.h"
+#include "prometheus/core/counter.h"
+#include "prometheus/core/gauge.h"
+#include "prometheus/core/histogram.h"
+#include "prometheus/core/info.h"
+#include "prometheus/core/summary.h"
 
 namespace prometheus {
 namespace {

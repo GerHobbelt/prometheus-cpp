@@ -1,4 +1,4 @@
-#include "pull/detail/base64.h"
+#include "prometheus/pull/detail/base64.h"
 
 #include <gtest/gtest.h>
 

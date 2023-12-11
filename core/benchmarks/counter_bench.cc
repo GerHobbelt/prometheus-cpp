@@ -1,8 +1,8 @@
 #include <benchmark/benchmark.h>
 
-#include "prometheus/counter.h"
-#include "prometheus/family.h"
-#include "prometheus/registry.h"
+#include "prometheus/core/counter.h"
+#include "prometheus/core/family.h"
+#include "prometheus/core/registry.h"
 
 static void BM_Counter_Increment(benchmark::State& state) {
   using prometheus::BuildCounter;

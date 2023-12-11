@@ -1,4 +1,4 @@
-#include "prometheus/text_serializer.h"
+#include "prometheus/core/text_serializer.h"
 
 #include <gmock/gmock.h>
 #include <gtest/gtest.h>
@@ -7,12 +7,12 @@
 #include <limits>
 #include <string>
 
-#include "prometheus/client_metric.h"
-#include "prometheus/histogram.h"
-#include "prometheus/info.h"
-#include "prometheus/metric_family.h"
-#include "prometheus/metric_type.h"
-#include "prometheus/summary.h"
+#include "prometheus/core/client_metric.h"
+#include "prometheus/core/histogram.h"
+#include "prometheus/core/info.h"
+#include "prometheus/core/metric_family.h"
+#include "prometheus/core/metric_type.h"
+#include "prometheus/core/summary.h"
 
 namespace prometheus {
 namespace {

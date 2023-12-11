@@ -6,11 +6,11 @@
 #include <stdexcept>
 #include <vector>
 
-#include "prometheus/counter.h"
-#include "prometheus/detail/future_std.h"
-#include "prometheus/family.h"
-#include "prometheus/metric_family.h"
-#include "prometheus/text_serializer.h"
+#include "prometheus/core/counter.h"
+#include "prometheus/core/detail/future_std.h"
+#include "prometheus/core/family.h"
+#include "prometheus/core/metric_family.h"
+#include "prometheus/core/text_serializer.h"
 #include "raii_locale.h"
 
 namespace prometheus {

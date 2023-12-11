@@ -6,9 +6,9 @@
 #include <random>
 #include <vector>
 
-#include "prometheus/family.h"
-#include "prometheus/registry.h"
-#include "prometheus/summary.h"
+#include "prometheus/core/family.h"
+#include "prometheus/core/registry.h"
+#include "prometheus/core/summary.h"
 
 using prometheus::Summary;
 

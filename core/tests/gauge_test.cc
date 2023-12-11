@@ -1,4 +1,4 @@
-#include "prometheus/gauge.h"
+#include "prometheus/core/gauge.h"
 
 #include <gtest/gtest.h>
 

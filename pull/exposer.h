@@ -7,7 +7,7 @@
 #include <string>
 #include <vector>
 
-#include "prometheus/collectable.h"
+#include "prometheus/core/collectable.h"
 
 class CivetServer;
 struct CivetCallbacks;

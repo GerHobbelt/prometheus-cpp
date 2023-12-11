@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 
-#include "prometheus/check_names.h"
+#include "prometheus/core/check_names.h"
 
 namespace prometheus {
 namespace {

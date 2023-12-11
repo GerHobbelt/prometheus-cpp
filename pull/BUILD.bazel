@@ -11,18 +11,19 @@ cc_library(
     ],
     hdrs = [
         "basic_auth.h",
+        "detail/base64.h",
         "endpoint.h",
         "exposer.h",
         "handler.h",
         "metrics_collector.h",
     ],
+    include_prefix = "prometheus/pull/",
     local_defines = [
         "HAVE_ZLIB",
     ],
     visibility = ["//visibility:public"],
     deps = [
-        "//prometheus",
-        "//pull/detail",
+        "//core",
         "@civetweb",
         "@zlib",
     ],

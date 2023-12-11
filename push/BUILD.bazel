@@ -8,13 +8,14 @@ cc_library(
     ],
     hdrs = [
         "curl_wrapper.h",
+        "detail/http_method.h",
         "gateway.h",
     ],
+    include_prefix = "prometheus/push/",
     linkopts = ["-lpthread"],
     visibility = ["//visibility:public"],
     deps = [
-        "//prometheus",
-        "//push/detail",
+        "//core",
         "@curl",
     ],
 )

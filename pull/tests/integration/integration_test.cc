@@ -9,11 +9,11 @@
 #include <string>
 #include <vector>
 
-#include "prometheus/counter.h"
-#include "prometheus/detail/future_std.h"
-#include "prometheus/family.h"
-#include "prometheus/registry.h"
-#include "pull/exposer.h"
+#include "prometheus/core/counter.h"
+#include "prometheus/core/detail/future_std.h"
+#include "prometheus/core/family.h"
+#include "prometheus/core/registry.h"
+#include "prometheus/pull/exposer.h"
 
 namespace prometheus {
 namespace {

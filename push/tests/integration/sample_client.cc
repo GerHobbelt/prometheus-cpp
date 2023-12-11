@@ -7,8 +7,8 @@
 #include "prometheus/client_metric.h"
 #include "prometheus/counter.h"
 #include "prometheus/family.h"
-#include "prometheus/gateway.h"
 #include "prometheus/registry.h"
+#include "push/gateway.h"
 
 #ifdef _WIN32
 #include <Winsock2.h>

@@ -1,4 +1,4 @@
-#include "prometheus/core/family.h"
+#include "prometheus/family.h"
 
 #include <algorithm>
 #include <cassert>
@@ -6,12 +6,12 @@
 #include <stdexcept>
 #include <utility>
 
-#include "prometheus/core/check_names.h"
-#include "prometheus/core/counter.h"
-#include "prometheus/core/gauge.h"
-#include "prometheus/core/histogram.h"
-#include "prometheus/core/info.h"
-#include "prometheus/core/summary.h"
+#include "prometheus/check_names.h"
+#include "prometheus/counter.h"
+#include "prometheus/gauge.h"
+#include "prometheus/histogram.h"
+#include "prometheus/info.h"
+#include "prometheus/summary.h"
 
 namespace prometheus {
 

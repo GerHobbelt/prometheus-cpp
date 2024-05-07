@@ -17,15 +17,15 @@ cc_library(
         "handler.h",
         "metrics_collector.h",
     ],
-    strip_include_prefix="pull/",
     include_prefix = "prometheus/",
     local_defines = [
         "HAVE_ZLIB",
     ],
+    strip_include_prefix = "/pull/",
     visibility = ["//visibility:public"],
     deps = [
         "//core",
-        "@civetweb",
+        "@civetweb//:civetserver",
         "@zlib",
     ],
 )

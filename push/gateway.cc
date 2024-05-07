@@ -1,5 +1,5 @@
 
-#include "prometheus/push/gateway.h"
+#include "prometheus/gateway.h"
 
 #include <algorithm>
 #include <iterator>
@@ -9,9 +9,9 @@
 #include <sstream>
 
 #include "curl_wrapper.h"
-#include "prometheus/core/detail/future_std.h"
-#include "prometheus/core/metric_family.h"  // IWYU pragma: keep
-#include "prometheus/core/text_serializer.h"
+#include "prometheus/detail/future_std.h"
+#include "prometheus/metric_family.h"  // IWYU pragma: keep
+#include "prometheus/text_serializer.h"
 
 // IWYU pragma: no_include <system_error>
 // IWYU pragma: no_include <cxxabi.h>

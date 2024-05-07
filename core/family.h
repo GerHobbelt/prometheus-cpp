@@ -6,12 +6,12 @@
 #include <unordered_map>
 #include <vector>
 
-#include "prometheus/core/client_metric.h"
-#include "prometheus/core/collectable.h"
-#include "prometheus/core/detail/future_std.h"
-#include "prometheus/core/detail/utils.h"
-#include "prometheus/core/labels.h"
-#include "prometheus/core/metric_family.h"
+#include "prometheus/client_metric.h"
+#include "prometheus/collectable.h"
+#include "prometheus/detail/future_std.h"
+#include "prometheus/detail/utils.h"
+#include "prometheus/labels.h"
+#include "prometheus/metric_family.h"
 
 // IWYU pragma: no_include "prometheus/core/counter.h"
 // IWYU pragma: no_include "prometheus/core/gauge.h"

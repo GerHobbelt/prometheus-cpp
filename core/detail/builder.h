@@ -2,7 +2,7 @@
 
 #include <string>
 
-#include "prometheus/core/labels.h"
+#include "prometheus/labels.h"
 
 // IWYU pragma: private
 // IWYU pragma: no_include "prometheus/core/family.h"

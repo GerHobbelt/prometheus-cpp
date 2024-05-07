@@ -1,10 +1,10 @@
-#include "prometheus/core/detail/utils.h"
+#include "prometheus/detail/utils.h"
 
 #include <cstddef>
 #include <map>
 #include <utility>
 
-#include "prometheus/core/detail/hash.h"
+#include "prometheus/detail/hash.h"
 
 namespace prometheus {
 

@@ -1,4 +1,4 @@
-#include "prometheus/core/text_serializer.h"
+#include "prometheus/text_serializer.h"
 
 #include <cmath>
 #include <limits>
@@ -6,9 +6,9 @@
 #include <ostream>
 #include <string>
 
-#include "prometheus/core/client_metric.h"
-#include "prometheus/core/metric_family.h"
-#include "prometheus/core/metric_type.h"
+#include "prometheus/client_metric.h"
+#include "prometheus/metric_family.h"
+#include "prometheus/metric_type.h"
 
 namespace prometheus {
 

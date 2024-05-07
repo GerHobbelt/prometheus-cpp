@@ -2,7 +2,7 @@
 
 #include <cstddef>
 
-#include "prometheus/core/labels.h"
+#include "prometheus/labels.h"
 
 namespace prometheus {
 namespace detail {

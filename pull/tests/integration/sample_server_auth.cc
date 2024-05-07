@@ -3,11 +3,11 @@
 #include <string>
 #include <thread>
 
-#include "prometheus/core/client_metric.h"
-#include "prometheus/core/counter.h"
-#include "prometheus/core/family.h"
-#include "prometheus/core/registry.h"
-#include "prometheus/pull/exposer.h"
+#include "prometheus/client_metric.h"
+#include "prometheus/counter.h"
+#include "prometheus/exposer.h"
+#include "prometheus/family.h"
+#include "prometheus/registry.h"
 
 int main() {
   using namespace prometheus;

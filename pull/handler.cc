@@ -1,4 +1,4 @@
-#include "prometheus/pull/handler.h"
+#include "prometheus/handler.h"
 
 #include <algorithm>
 #include <chrono>
@@ -13,11 +13,11 @@
 
 #include <civetweb.h>
 
-#include "prometheus/core/counter.h"
-#include "prometheus/core/metric_family.h"
-#include "prometheus/core/summary.h"
-#include "prometheus/core/text_serializer.h"
-#include "prometheus/pull/metrics_collector.h"
+#include "prometheus/counter.h"
+#include "prometheus/metric_family.h"
+#include "prometheus/metrics_collector.h"
+#include "prometheus/summary.h"
+#include "prometheus/text_serializer.h"
 
 namespace prometheus {
 namespace detail {

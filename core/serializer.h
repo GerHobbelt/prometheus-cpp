@@ -4,7 +4,7 @@
 #include <string>
 #include <vector>
 
-#include "prometheus/core/metric_family.h"
+#include "prometheus/metric_family.h"
 
 namespace prometheus {
 

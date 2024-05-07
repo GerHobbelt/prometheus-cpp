@@ -1,4 +1,4 @@
-#include "prometheus/core/detail/time_window_quantiles.h"  // IWYU pragma: export
+#include "prometheus/detail/time_window_quantiles.h"  // IWYU pragma: export
 
 #include <memory>
 #include <ratio>

@@ -3,9 +3,9 @@
 #include <chrono>
 
 #include "benchmark_helpers.h"
-#include "prometheus/core/counter.h"
-#include "prometheus/core/family.h"
-#include "prometheus/core/registry.h"
+#include "prometheus/counter.h"
+#include "prometheus/family.h"
+#include "prometheus/registry.h"
 
 static void BM_Registry_CreateFamily(benchmark::State& state) {
   using prometheus::BuildCounter;

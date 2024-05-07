@@ -2,7 +2,7 @@
 
 #include <string>
 
-#include "prometheus/core/metric_type.h"
+#include "prometheus/metric_type.h"
 
 namespace prometheus {
 

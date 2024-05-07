@@ -9,15 +9,15 @@
 #include <utility>
 #include <vector>
 
-#include "prometheus/core/client_metric.h"
-#include "prometheus/core/counter.h"
-#include "prometheus/core/family.h"
-#include "prometheus/core/gauge.h"
-#include "prometheus/core/histogram.h"
-#include "prometheus/core/info.h"
-#include "prometheus/core/labels.h"
-#include "prometheus/core/registry.h"
-#include "prometheus/core/summary.h"
+#include "prometheus/client_metric.h"
+#include "prometheus/counter.h"
+#include "prometheus/family.h"
+#include "prometheus/gauge.h"
+#include "prometheus/histogram.h"
+#include "prometheus/info.h"
+#include "prometheus/labels.h"
+#include "prometheus/registry.h"
+#include "prometheus/summary.h"
 
 namespace prometheus {
 namespace {

@@ -2,8 +2,8 @@
 
 #include <string>
 
-#include "prometheus/core/check_names.h"
-#include "prometheus/core/metric_type.h"
+#include "prometheus/check_names.h"
+#include "prometheus/metric_type.h"
 
 namespace prometheus {
 namespace {

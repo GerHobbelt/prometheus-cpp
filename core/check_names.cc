@@ -1,5 +1,5 @@
 
-#include "prometheus/core/check_names.h"
+#include "prometheus/check_names.h"
 
 #include <algorithm>
 #include <iterator>

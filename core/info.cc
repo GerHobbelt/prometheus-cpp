@@ -1,4 +1,4 @@
-#include "prometheus/core/info.h"
+#include "prometheus/info.h"
 
 namespace prometheus {
 

@@ -6,11 +6,11 @@
 #include <mutex>
 #include <vector>
 
-#include "prometheus/core/collectable.h"
-#include "prometheus/core/counter.h"
-#include "prometheus/core/family.h"
-#include "prometheus/core/registry.h"
-#include "prometheus/core/summary.h"
+#include "prometheus/collectable.h"
+#include "prometheus/counter.h"
+#include "prometheus/family.h"
+#include "prometheus/registry.h"
+#include "prometheus/summary.h"
 
 namespace prometheus {
 namespace detail {

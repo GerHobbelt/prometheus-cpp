@@ -5,10 +5,10 @@
 #include <string>
 #include <vector>
 
-#include "prometheus/core/collectable.h"
-#include "prometheus/core/family.h"
-#include "prometheus/core/labels.h"
-#include "prometheus/core/metric_family.h"
+#include "prometheus/collectable.h"
+#include "prometheus/family.h"
+#include "prometheus/labels.h"
+#include "prometheus/metric_family.h"
 
 namespace prometheus {
 

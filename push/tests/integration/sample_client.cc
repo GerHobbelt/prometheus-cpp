@@ -4,11 +4,11 @@
 #include <string>
 #include <thread>
 
-#include "prometheus/core/client_metric.h"
-#include "prometheus/core/counter.h"
-#include "prometheus/core/family.h"
-#include "prometheus/core/registry.h"
-#include "prometheus/push/gateway.h"
+#include "prometheus/client_metric.h"
+#include "prometheus/counter.h"
+#include "prometheus/family.h"
+#include "prometheus/gateway.h"
+#include "prometheus/registry.h"
 
 #ifdef _WIN32
 #include <Winsock2.h>

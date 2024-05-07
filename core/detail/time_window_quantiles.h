@@ -4,7 +4,7 @@
 #include <cstddef>
 #include <vector>
 
-#include "prometheus/core/detail/ckms_quantiles.h"  // IWYU pragma: export
+#include "prometheus/detail/ckms_quantiles.h"  // IWYU pragma: export
 
 // IWYU pragma: private, include "prometheus/core/summary.h"
 

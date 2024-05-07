@@ -3,8 +3,8 @@
 #include <string>
 #include <vector>
 
-#include "prometheus/core/client_metric.h"
-#include "prometheus/core/metric_type.h"
+#include "prometheus/client_metric.h"
+#include "prometheus/metric_type.h"
 
 namespace prometheus {
 

@@ -1,4 +1,4 @@
-#include "prometheus/core/gauge.h"
+#include "prometheus/gauge.h"
 
 #include <ctime>
 

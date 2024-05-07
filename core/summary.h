@@ -5,11 +5,11 @@
 #include <mutex>
 #include <vector>
 
-#include "prometheus/core/client_metric.h"
-#include "prometheus/core/detail/builder.h"  // IWYU pragma: export
-#include "prometheus/core/detail/ckms_quantiles.h"
-#include "prometheus/core/detail/time_window_quantiles.h"
-#include "prometheus/core/metric_type.h"
+#include "prometheus/client_metric.h"
+#include "prometheus/detail/builder.h"  // IWYU pragma: export
+#include "prometheus/detail/ckms_quantiles.h"
+#include "prometheus/detail/time_window_quantiles.h"
+#include "prometheus/metric_type.h"
 
 namespace prometheus {
 

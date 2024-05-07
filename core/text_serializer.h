@@ -3,8 +3,8 @@
 #include <iosfwd>
 #include <vector>
 
-#include "prometheus/core/metric_family.h"
-#include "prometheus/core/serializer.h"
+#include "prometheus/metric_family.h"
+#include "prometheus/serializer.h"
 
 namespace prometheus {
 

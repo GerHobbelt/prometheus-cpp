@@ -1,16 +1,16 @@
-#include "prometheus/core/family.h"
+#include "prometheus/family.h"
 
 #include <gmock/gmock.h>
 #include <gtest/gtest.h>
 
 #include <memory>
 
-#include "prometheus/core/client_metric.h"
-#include "prometheus/core/counter.h"
-#include "prometheus/core/detail/future_std.h"
-#include "prometheus/core/histogram.h"
-#include "prometheus/core/labels.h"
-#include "prometheus/core/summary.h"
+#include "prometheus/client_metric.h"
+#include "prometheus/counter.h"
+#include "prometheus/detail/future_std.h"
+#include "prometheus/histogram.h"
+#include "prometheus/labels.h"
+#include "prometheus/summary.h"
 
 namespace prometheus {
 namespace {

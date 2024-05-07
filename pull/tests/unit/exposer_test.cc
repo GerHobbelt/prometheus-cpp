@@ -1,4 +1,4 @@
-#include "prometheus/pull/exposer.h"
+#include "prometheus/exposer.h"
 
 #include <gtest/gtest.h>
 

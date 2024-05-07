@@ -1,4 +1,4 @@
-#include "prometheus/core/summary.h"
+#include "prometheus/summary.h"
 
 #include <utility>
 

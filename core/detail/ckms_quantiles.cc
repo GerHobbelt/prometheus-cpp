@@ -1,4 +1,4 @@
-#include "prometheus/core/detail/ckms_quantiles.h"  // IWYU pragma: export
+#include "prometheus/detail/ckms_quantiles.h"  // IWYU pragma: export
 
 #include <algorithm>
 #include <cmath>

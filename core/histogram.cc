@@ -1,4 +1,4 @@
-#include "prometheus/core/histogram.h"
+#include "prometheus/histogram.h"
 
 #include <algorithm>
 #include <cstddef>

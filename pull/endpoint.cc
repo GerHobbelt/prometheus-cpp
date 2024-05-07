@@ -1,10 +1,10 @@
-#include "prometheus/pull/endpoint.h"
+#include "prometheus/endpoint.h"
 
 #include <utility>
 
-#include "prometheus/core/detail/future_std.h"
-#include "prometheus/pull/basic_auth.h"
-#include "prometheus/pull/handler.h"
+#include "prometheus/basic_auth.h"
+#include "prometheus/detail/future_std.h"
+#include "prometheus/handler.h"
 
 namespace prometheus {
 namespace detail {

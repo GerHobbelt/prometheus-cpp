@@ -1,4 +1,4 @@
-#include "prometheus/pull/exposer.h"
+#include "prometheus/exposer.h"
 
 #include <CivetServer.h>
 
@@ -7,8 +7,8 @@
 #include <string>
 #include <utility>
 
-#include "prometheus/core/detail/future_std.h"
-#include "prometheus/pull/endpoint.h"
+#include "prometheus/detail/future_std.h"
+#include "prometheus/endpoint.h"
 
 namespace prometheus {
 

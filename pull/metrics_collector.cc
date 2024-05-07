@@ -1,8 +1,8 @@
-#include "prometheus/pull/metrics_collector.h"
+#include "prometheus/metrics_collector.h"
 
 #include <iterator>
 
-#include "prometheus/core/collectable.h"
+#include "prometheus/collectable.h"
 
 namespace prometheus {
 namespace detail {

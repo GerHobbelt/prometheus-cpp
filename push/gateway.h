@@ -7,9 +7,9 @@
 #include <utility>
 #include <vector>
 
-#include "prometheus/core/collectable.h"
-#include "prometheus/core/labels.h"
-#include "prometheus/push/detail/http_method.h"
+#include "prometheus/collectable.h"
+#include "prometheus/detail/http_method.h"
+#include "prometheus/labels.h"
 
 namespace prometheus {
 

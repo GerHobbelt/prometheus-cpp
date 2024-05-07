@@ -1,10 +1,10 @@
-#include "prometheus/pull/basic_auth.h"
+#include "prometheus/basic_auth.h"
 
 #include <CivetServer.h>
 
 #include <utility>
 
-#include "prometheus/pull/detail/base64.h"
+#include "prometheus/detail/base64.h"
 
 namespace prometheus {
 

@@ -3,7 +3,7 @@
 #include <mutex>
 #include <string>
 
-#include "prometheus/push/detail/http_method.h"
+#include "prometheus/detail/http_method.h"
 
 namespace prometheus {
 namespace detail {

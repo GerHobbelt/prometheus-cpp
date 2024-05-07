@@ -17,7 +17,8 @@ cc_library(
         "handler.h",
         "metrics_collector.h",
     ],
-    include_prefix = "prometheus/pull/",
+    strip_include_prefix="pull/",
+    include_prefix = "prometheus/",
     local_defines = [
         "HAVE_ZLIB",
     ],

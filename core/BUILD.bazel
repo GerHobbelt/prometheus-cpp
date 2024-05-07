@@ -41,6 +41,7 @@ cc_library(
         "summary.h",
         "text_serializer.h",
     ],
-    include_prefix = "prometheus/core/",
+    strip_include_prefix = "core",
+    include_prefix = "prometheus/",
     visibility = ["//visibility:public"],
 )

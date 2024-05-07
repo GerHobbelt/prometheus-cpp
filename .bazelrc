@@ -1,5 +1,4 @@
 
-common --experimental_enable_bzlmod
 build:asan --strip=never 
 build:asan --copt -fsanitize=address
 build:asan --copt -DADDRESS_SANITIZER
@@ -11,6 +10,5 @@ build:asan --cc_output_directory_tag=asan
 
 build:ssl --define=with_civetweb_ssl=true
 
-common --enable_bzlmod
+common --registry="https://bcr.bazel.build"
 common --registry="https://raw.githubusercontent.com/Pattern-Labs/index-registry/main/"
-common --registry="https://raw.githubusercontent.com/bazelbuild/bazel-central-registry/main/"

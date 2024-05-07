@@ -11,7 +11,8 @@ cc_library(
         "detail/http_method.h",
         "gateway.h",
     ],
-    include_prefix = "prometheus/push/",
+    strip_include_prefix = "push/",
+    include_prefix = "prometheus/",
     linkopts = ["-lpthread"],
     visibility = ["//visibility:public"],
     deps = [

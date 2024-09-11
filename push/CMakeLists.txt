@@ -18,19 +18,29 @@ target_compile_features(push
     cxx_std_11
 )
 
+set(CURL_TARGET)
+if(TARGET CURL::libcurl)
+  set(CURL_TARGET CURL::libcurl)
+elseif(TARGET CURL::libcurl_shared)
+  set(CURL_TARGET CURL::libcurl_shared)
+elseif(TARGET CURL::libcurl_static)
+  set(CURL_TARGET CURL::libcurl_static)
+endif()
+
 target_link_libraries(push
   PUBLIC
     ${PROJECT_NAME}::core
   PRIVATE
     ${PROJECT_NAME}::util
     Threads::Threads
-    CURL::libcurl
+    ${CURL_TARGET}
     $<$<AND:$<BOOL:UNIX>,$<NOT:$<BOOL:APPLE>>>:rt>
 )
 
 target_include_directories(push
   PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}/include>
 )
 
 set_target_properties(push

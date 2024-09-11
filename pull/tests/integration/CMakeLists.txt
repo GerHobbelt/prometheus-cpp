@@ -26,6 +26,7 @@ target_link_libraries(sample_server_auth
      ${PROJECT_NAME}::pull
 )
 
+hunter_add_package(CURL)
 find_package(CURL)
 
 if(CURL_FOUND)
@@ -33,10 +34,19 @@ if(CURL_FOUND)
     integration_test.cc
   )
 
+  set(CURL_TARGET)
+  if(TARGET CURL::libcurl)
+    set(CURL_TARGET CURL::libcurl)
+  elseif(TARGET CURL::libcurl_shared)
+    set(CURL_TARGET CURL::libcurl_shared)
+  elseif(TARGET CURL::libcurl_static)
+    set(CURL_TARGET CURL::libcurl_static)
+  endif()
+
   target_link_libraries(prometheus_pull_integration_test
     PRIVATE
       ${PROJECT_NAME}::pull
-      CURL::libcurl
+      ${CURL_TARGET}
       GTest::gmock_main
   )
 

@@ -3,6 +3,9 @@ cmake_minimum_required(VERSION 3.14 FATAL_ERROR)
 if(POLICY CMP0091)
   cmake_policy(SET CMP0091 NEW) # recognize CMAKE_MSVC_RUNTIME_LIBRARY
 endif()
+if(POLICY CMP0144)
+  cmake_policy(SET CMP0144 NEW)
+endif()
 
 include(cmake/HunterGate.cmake)
 
